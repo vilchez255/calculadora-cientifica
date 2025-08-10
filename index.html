@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica Hyperion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="logo-background">
+    <img id="bouncing-logo" src="img/logo.png" alt="Logo de fondo">
+</div>
+
+<div class="calculator-container">
+    <div class="display">
+        <div id="expression" class="expression"></div>
+        <div id="result" class="result">0</div>
+    </div>
+    <div class="buttons">
+        <button class="btn" onclick="appendToExpression('(')">(</button>
+        <button class="btn" onclick="appendToExpression(')')">)</button>
+        <button class="btn" onclick="appendToExpression('^')">^</button>
+        <button class="btn" onclick="appendToExpression('sqrt(')">√</button>
+        <button class="btn clear" onclick="clearAll()">C</button>
+        
+        <button class="btn" onclick="appendToExpression('sin(')">sin</button>
+        <button class="btn" onclick="appendToExpression('cos(')">cos</button>
+        <button class="btn" onclick="appendToExpression('tan(')">tan</button>
+        <button class="btn" onclick="appendToExpression('log(')">log</button>
+        <button class="btn" onclick="appendToExpression('ln(')">ln</button>
+
+        <button class="btn" onclick="appendToExpression('7')">7</button>
+        <button class="btn" onclick="appendToExpression('8')">8</button>
+        <button class="btn" onclick="appendToExpression('9')">9</button>
+        <button class="btn operator" onclick="appendToExpression('/')">÷</button>
+        <button class="btn operator" onclick="appendToExpression('*')">×</button>
+
+        <button class="btn" onclick="appendToExpression('4')">4</button>
+        <button class="btn" onclick="appendToExpression('5')">5</button>
+        <button class="btn" onclick="appendToExpression('6')">6</button>
+        <button class="btn operator" onclick="appendToExpression('+')">+</button>
+        <button class="btn operator" onclick="appendToExpression('-')">-</button>
+
+        <button class="btn" onclick="appendToExpression('1')">1</button>
+        <button class="btn" onclick="appendToExpression('2')">2</button>
+        <button class="btn" onclick="appendToExpression('3')">3</button>
+        <button class="btn" onclick="appendToExpression('Math.PI')">π</button>
+        <button class="btn" onclick="appendToExpression('!')">!</button>
+        
+        <button class="btn" onclick="appendToExpression('0')">0</button>
+        <button class="btn" onclick="appendToExpression('.')">.</button>
+        <button class="btn" onclick="appendToExpression('Math.E')">e</button>
+        <button class="btn operator equal-sign" onclick="calculateResult()">=</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
